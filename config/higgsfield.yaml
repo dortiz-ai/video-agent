@@ -1,0 +1,31 @@
+# Configuración de generación en Higgsfield.
+# IDs verificados en el catálogo de Higgsfield (models_list) el 2026-11-27.
+
+# Qué modelo usar según la herramienta que pide cada skill / el brief.
+models:
+  banana-pro:   nano_banana_pro    # default de imagen (face lock, outfit, sheets, plates)
+  soul-cinema:  soul_cinematic     # iteración barata de face lock / outfit (modo 1B)
+  gpt-2:        gpt_image_2        # face lock de máxima fidelidad / detalle (modo 4)
+  seedance:     seedance_2_0       # video; máx. 9 referencias, igual que cinema-worldbuilder
+
+# Parámetros por defecto (el brief puede sobrescribirlos).
+defaults:
+  image:
+    resolution: 2k
+  video:
+    resolution: 720p         # 1080p/4k cuestan más; std requiere plan Plus o superior
+    mode: std                # std | fast
+    generate_audio: true     # audio diegético, según cinema-worldbuilder
+
+# Créditos por unidad. El catálogo de Higgsfield NO publica precios: complétalos con lo que
+# muestra la app de Higgsfield al generar. Si un valor está en null, el agente lo informa
+# como "precio desconocido" en el pedido de autorización y NO lo inventa.
+credits:
+  nano_banana_pro:  { per_image: null }
+  soul_cinematic:   { per_image: null }
+  gpt_image_2:      { per_image: null }
+  seedance_2_0:     { per_second_720p: null, per_second_1080p: null }
+
+# Margen de seguridad: el agente no lanza un plan si el saldo es menor que el total estimado
+# multiplicado por este factor.
+balance_safety_factor: 1.1

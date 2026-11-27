@@ -51,12 +51,17 @@ Automatizado (cron, CI, otro agente):
 ANTHROPIC_API_KEY=... scripts/run.sh briefs/*.yaml
 ```
 
-## Qué queda manual
+## Generación en Higgsfield
 
-El conector de Higgsfield disponible en Claude **no genera medios** (solo lista modelos,
-muestra generaciones e importa clips). Por eso el agente entrega los prompts y el
-`manifest.json`; la generación en Higgsfield se hace pegando los prompts, o conectando
-un script propio a la API de Higgsfield que lea `manifest.json`.
+Tras la preproducción, el agente arma un plan (modelo, parámetros y créditos por asset y toma),
+pide **una sola autorización** con el modelo y el consumo estimado en créditos, y con el "sí"
+envía todo directamente a Higgsfield. Ver la etapa 6 en `AGENTS.md`.
+
+- Requiere que el agente tenga una herramienta de Higgsfield que **genere** medios. El conector
+  de Higgsfield de Claude solo lee el catálogo y el saldo; sin generador, el agente entrega los
+  prompts y avisa.
+- Los precios por modelo van en `config/higgsfield.yaml`: el catálogo de Higgsfield no los publica.
+- `scripts/run.sh` (headless) no puede responder la autorización: úsalo con `generate: prompts_only`.
 
 ## Notas
 

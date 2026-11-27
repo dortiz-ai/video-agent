@@ -11,6 +11,8 @@ key_message: "Compra en tus tiendas favoritas de EE. UU. y Upper te lo trae a Ec
 cta: "Descarga la app y haz tu primera compra"
 mode: M1
 image_tool: banana-pro
+generate: auto
+video_resolution: 720p
 characters:
   - name: Protagonista
     status: needs_developing

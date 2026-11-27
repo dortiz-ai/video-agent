@@ -18,6 +18,8 @@ Un brief es un YAML en `briefs/<slug>.yaml`. Campos:
 | `characters` | no | lista; cada uno con `name`, `status` (`built` / `needs_developing` / `extra`), `description`, `references` |
 | `locations` | no | lista de lugares con `description` y `references` opcionales |
 | `references` | no | rutas a imágenes en `briefs/assets/<slug>/` (máx. 9 por toma en Seedance) |
+| `generate` | no | `auto` = tras la preproducción pide autorización de créditos y genera en Higgsfield; `prompts_only` = solo entrega prompts (default `auto`) |
+| `video_resolution` | no | `480p`, `720p` (default), `1080p`, `4k` — sobrescribe `config/higgsfield.yaml` |
 | `image_tool` | no | `banana-pro` (default), `gpt-2`, `soul-cinema` |
 | `constraints` | no | do's/don'ts de marca, cosas a evitar |
 
