@@ -1,0 +1,27 @@
+# Brief de ejemplo. Reemplaza los datos de oferta por los reales de la campaña antes de usarlo.
+slug: upper-reel-compras-usa
+brand: Upper
+objective: "Activación: que usuarios que descargaron la app hagan su primera compra"
+audience: "Jóvenes 20-35 en Ecuador que compran online en tiendas de EE. UU."
+platform: reels
+aspect_ratio: "9:16"
+runtime_seconds: 15
+language: es
+key_message: "Compra en tus tiendas favoritas de EE. UU. y Upper te lo trae a Ecuador"
+cta: "Descarga la app y haz tu primera compra"
+mode: M1
+image_tool: banana-pro
+characters:
+  - name: Protagonista
+    status: needs_developing
+    description: "Mujer de 26 años, cabello castaño ondulado, look casual urbano, sonrisa cómplice"
+    references: []
+locations:
+  - name: Departamento en Guayaquil
+    description: "Sala luminosa de departamento moderno, tarde, luz cálida por la ventana; caja de envío sobre la mesa"
+references: []
+constraints:
+  - "Tono Upper: joven, directo, cómplice, con energía (ver skills/upper-ux-writer)"
+  - "Look real, nada de anuncio brillante"
+  - "Sin música en el prompt de video (audio diegético: cinta de embalaje, caja abriéndose, reacción)"
+  - "No mencionar tiempos de entrega ni precios que no estén confirmados"
